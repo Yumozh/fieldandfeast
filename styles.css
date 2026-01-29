@@ -63,11 +63,108 @@ table {
 
 /* GLOBAL STYLES (mobile first/small) */
 body{
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     background-color: var(--soft-white);
+    line-height: 1.25;
+    margin: auto;
+}
+header{
+    grid-area: head;
+    background-color: var(--midnight-bue);
+}
+header>img{
+    display: block;
+    margin: auto;
+    height: auto;
+}
+h1{
+    font-size: 6rem;
+    font-family: var(--font-display);
+    color: var(--linen);
+    text-align: center;
+    margin: 1rem;
+}
+h2{
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--midnight-bue);
+    margin: 40px 0 10px 0;
+}
+h3{
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--linen);
+    margin: 5px 0 10px 0;
+    font-weight: bold;
+}
+p{
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-top: 0;
+    color: var(--linen);
+}
+header>p{
+    color: var(--linen);
+    font-style: italic;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+nav{
+    background-color: var(--champagne-gold);
+}
+ nav>ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 24px;
+ }
+nav li{
+    color: var(--midnight-bue);
+    font-weight: bold;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+}
+main{
+    background-color: var(--soft-white);
+}
+main > section{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+#welcome{
+    grid-area: welcome;
+    border-bottom: 3px solid var(--champagne-gold);
+}
+#welcome p{
+    margin-top: 0;
+    color: var(--dark-charcoal);
+}
+#offerings{
     display: grid;
     justify-content: center;
-    grid-gap: 5px 50px;
+    grid-gap: 15px 50px;
     grid-template-columns: auto;
-    grid-template-areas: "head" "welcome" offerings";
+    grid-template-areas: "provisions" "dining-experiences" "monthly-basket";
+    border-bottom: 3px solid var(--champagne-gold);
+    padding-bottom: 32px;
+}
+.offering-type{
+    background-color: var(--olive-green);
+    color: var(--linen);
+    border-radius: 10px;
+    padding: 2rem 25px 2rem 25px;
+}
+.offering-type p{
+    margin: 0;
+}
+.offering-type >ul{
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+}
+.offering-type >p, ul{
+    margin: 0;
 }
