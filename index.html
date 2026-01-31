@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Field & Feast</title>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -25,47 +26,51 @@
            </section> 
            <section id="offerings">
                 <h2>Our Offerings</h2>
-                    <section id="provisions" class="offering-type">
-                        <h3>Artisan Provisions</h3>
-                        <p>Hand-selected, seasonal ingredients sourced from our estate farm and trusted local growers. Each item is chosen for its freshness, flavor, and integrity.</p>
-                    </section>
-                    <section id="dining-experiences" class="offering-type">
-                        <h3>Exclusive Dining Experiences</h3>
-                        <p>Join us for intimate chef-led tastings and farm-to-table feasts, where carefully crafted menus highlight the best of the season.</p>
-                    </section>
-                    <section id="monthly-basket" class="offering-type">
-                        <h3>The Field & Feast Monthly Basket</h3>
-                        <p>Experience a curated selection of premium seasonal ingredients delivered to your doorstep each month.</p>
-                        <ul>
-                            <li>Hand-Harvested Produce: Fresh, organic fruits and vegetables.</li>
-                            <li>Artisan-Crafted Goods: Specialty cheeses, house-made preserves, and small-batch baked goods.</li>
-                            <li>Exclusive Recipes & Pairings: Thoughtfully designed by our chefs to inspire culinary creativity.</li>
-                        </ul>
-                        <p>Elevate your home dining with the finest farm-to-table offerings, elegantly packaged and delivered with care.</p>
+                    <section class="offerings">
+                        <section class="provisions offering-type">
+                            <h3>Artisan Provisions</h3>
+                            <p>Hand-selected, seasonal ingredients sourced from our estate farm and trusted local growers. Each item is chosen for its freshness, flavor, and integrity.</p>
+                        </section>
+                        <section class="dining-experiences offering-type">
+                            <h3>Exclusive Dining Experiences</h3>
+                            <p>Join us for intimate chef-led tastings and farm-to-table feasts, where carefully crafted menus highlight the best of the season.</p>
+                        </section>
+                        <section class="monthly-basket offering-type">
+                            <h3>The Field & Feast Monthly Basket</h3>
+                            <p>Experience a curated selection of premium seasonal ingredients delivered to your doorstep each month.</p>
+                            <ul>
+                                <li>Hand-Harvested Produce: Fresh, organic fruits and vegetables.</li>
+                                <li>Artisan-Crafted Goods: Specialty cheeses, house-made preserves, and small-batch baked goods.</li>
+                                <li>Exclusive Recipes & Pairings: Thoughtfully designed by our chefs to inspire culinary creativity.</li>
+                            </ul>
+                            <p>Elevate your home dining with the finest farm-to-table offerings, elegantly packaged and delivered with care.</p>
+                        </section>
                     </section>
            </section>
            <section id="gallery">
                 <h2>A Gallery of Field & Feast</h2>
                 <p>Experience the elegance and artistry behind Field & Feast through our curated collection of images. From lush fields and handcrafted ingredients to beautifully plated farm-to-table creations, each photo tells the story of our commitment to excellence.</p>
-                <section>
-                    <img src="images/tomatoes-200w.jpg" alt="tomatoes image">
-                    <p>Heirloom tomatoes at peak ripeness.</p>
-                </section>
-                <section>
-                    <img src="images/olive-oil-200w.jpg" alt="olive-oil image">
-                    <p>Drizzling golden olive oil over fresh harvest.</p>
-                </section>
-                <section>
-                    <img src="images/table-setting-200w.jpg" alt="table-setting image">
-                    <p>Elegant tablescape under the evening sky.</p>
-                </section>
-                <section>
-                    <img src="images/chef-plating-200w.jpg" alt="chef-plating image">
-                    <p>Artful plating with seasonal ingredients.</p>
-                </section>
-                <section>
-                    <img src="images/basket-200w.jpg" alt="basket image">
-                    <p>Our monthly basket, curated with care.</p>
+                    <section class="gallery-items">
+                        <figure class="tomatoes">
+                            <img src="images/tomatoes-200w.jpg" alt="tomatoes image">
+                            <figcaption>Heirloom tomatoes at peak ripeness.</figcaption>
+                        </figure>
+                        <figure class="olive-oil">
+                            <img src="images/olive-oil-200w.jpg" alt="olive-oil image">
+                            <figcaption>Drizzling golden olive oil over fresh harvest.</figcaption>
+                        </figure>
+                        <figure class="table-setting">
+                            <img src="images/table-setting-200w.jpg" alt="table-setting image">
+                            <figcaption>Elegant tablescape under the evening sky.</figcaption>
+                        </figure>
+                        <figure class="chef-plating">
+                            <img src="images/chef-plating-200w.jpg" alt="chef-plating image">
+                            <figcaption>Artful plating with seasonal ingredients.</figcaption>
+                        </figure>
+                        <figure class="basket">
+                            <img src="images/basket-200w.jpg" alt="basket image">
+                            <figcaption>Our monthly basket, curated with care.</figcaption>
+                        </figure>
                 </section>
                 <input type="button" value="View Our Full Gallery">
            </section>
@@ -74,11 +79,11 @@
             <address>
                 123 Estate Lane, Wine Country, CA<br>
                 <a href="tel:15551234567">(555) 123-4567</a><br>
-                <a href="mailto:hello@fieldandfeast.com">hello@fieldandfeast.com</a>
+                <a class="external-link" href="mailto:hello@fieldandfeast.com">hello@fieldandfeast.com</a>
             </address>
             <p>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
+                <a class="external-link" href="#">Instagram</a>
+                <a class="external-link" href="#">Facebook</a>
             </p>
         </footer>
 

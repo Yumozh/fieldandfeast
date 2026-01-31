@@ -64,7 +64,7 @@ table {
 /* GLOBAL STYLES (mobile first/small) */
 body{
     font-family: var(--font-display);
-    background-color: var(--soft-white);
+    background-color: var(--linen);
     line-height: 1.25;
     margin: auto;
 }
@@ -78,7 +78,7 @@ header>img{
     height: auto;
 }
 h1{
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: var(--font-display);
     color: var(--linen);
     text-align: center;
@@ -86,20 +86,21 @@ h1{
 }
 h2{
     font-family: var(--font-display);
-    font-size: 4rem;
+    font-size: 2rem;
+    line-height: 2rem;
     color: var(--midnight-bue);
-    margin: 40px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 h3{
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: var(--linen);
-    margin: 5px 0 10px 0;
+    margin: 0 0 5px;
     font-weight: bold;
 }
 p{
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 1rem;
     margin-top: 0;
     color: var(--linen);
 }
@@ -107,7 +108,7 @@ header>p{
     color: var(--linen);
     font-style: italic;
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: bold;
 }
@@ -125,7 +126,7 @@ nav li{
     color: var(--midnight-bue);
     font-weight: bold;
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 1.25rem;
 }
 main{
     background-color: var(--soft-white);
@@ -142,29 +143,155 @@ main > section{
     margin-top: 0;
     color: var(--dark-charcoal);
 }
-#offerings{
+.offerings{
     display: grid;
     justify-content: center;
-    grid-gap: 15px 50px;
-    grid-template-columns: auto;
-    grid-template-areas: "provisions" "dining-experiences" "monthly-basket";
+    grid-gap: 7px;
+    grid-template-columns:auto;
+    grid-template-rows: auto;
+    grid-template-areas:"provisions"
+                        "dining-experiences"
+                        "monthly-basket";
     border-bottom: 3px solid var(--champagne-gold);
-    padding-bottom: 32px;
+    padding-bottom: 2rem;
 }
+
+
+.provisions { 
+    grid-area: provisions; }
+.dining-experiences { 
+    grid-area: dining-experiences; }
+.monthly-basket { 
+    grid-area: monthly-basket;
+    grid-column: 1 / -1; }
+
+
 .offering-type{
     background-color: var(--olive-green);
     color: var(--linen);
     border-radius: 10px;
-    padding: 2rem 25px 2rem 25px;
+    padding: 1rem 1.5rem;
 }
-.offering-type p{
+.offering-type >p{
     margin: 0;
 }
 .offering-type >ul{
     list-style: disc;
     padding-left: 1.5rem;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .offering-type >p, ul{
     margin: 0;
+}
+#gallery{
+    border-bottom: 3px solid var(--champagne-gold);
+    padding-bottom: 32px;
+    margin-bottom: 2rem;
+}
+#gallery p{
+    color: var(--dark-charcoal);
+}
+figcaption{
+    color: var(--dark-charcoal);
+    text-align: center;
+    font-style: italic;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+}
+.gallery-items{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:"tomatoes"
+                        "olive-oil"
+                        "table-setting"
+                        "chef-plating"
+                        "basket";
+    
+    padding-bottom: 2rem;
+}
+
+.tomatoes { 
+    grid-area: tomatoes; }
+.olive-oil { 
+    grid-area: olive-oil; }
+.table-setting { 
+    grid-area: table-setting;}
+.chef-plating { 
+    grid-area: chef-plating;}
+.basket { 
+    grid-area: basket;}
+
+
+figure{
+    background-color: var(--soft-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.247);
+    margin: 0;
+}
+figure >img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+input{
+    background-color: var(--olive-green);
+    border-radius: 10px;
+    width: 100%;
+    border: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--soft-white);
+    font-weight: bold;
+    font-family: var(--font-display);
+}
+footer{
+    background-color: var(--midnight-bue);
+    padding: 2rem 0 2rem;
+}
+address,a{
+    text-align: center;
+    font-family: var(--font-display);
+    line-height: 1.25;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--linen);
+}
+.external-link{
+    color: var(--champagne-gold);
+    font-weight: bold;
+}
+footer>p{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+/* MEDIA QUERY MEDIUM */
+@media (min-width: 600px){
+  .offerings{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "provisions dining-experiences"
+      "monthly-basket monthly-basket";
+  }
+  .gallery-items{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "tomatoes olive-oil"
+                        "table-setting chef-plating"
+                        "basket .";
+  }
+}
+
+@media (min-width: 900px){
+    .gallery-items{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+                        "tomatoes olive-oil table-setting"
+                        "chef-plating basket .";
+  }
 }
