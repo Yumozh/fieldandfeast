@@ -237,7 +237,7 @@ figure >img {
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
-input{
+button{
     background-color: var(--olive-green);
     border-radius: 10px;
     width: 100%;
